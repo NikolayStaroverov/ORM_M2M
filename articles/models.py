@@ -9,6 +9,9 @@ class Tag(models.Model):
         verbose_name_plural = 'Тэги'
         ordering = ['name']
 
+    def __str__(self):
+        return self.name
+
 
 class Article(models.Model):
     title = models.CharField(max_length=256, verbose_name='Название')
